@@ -1,0 +1,149 @@
+.banner {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.banner__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fallback placeholder */
+.banner__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__placeholder-content {
+  text-align: center;
+  color: white;
+  opacity: 0.7;
+}
+
+.banner__placeholder-content p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner__placeholder-content small {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.banner__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.banner__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.banner__subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.banner__slope {
+  position: absolute;
+  bottom: -302px;
+  left: -50px;
+  width: calc(100% + 100px);
+  height: 300px;
+  background: white;
+  z-index: 4;
+  transform: skewY(-4deg);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 40vh;
+  }
+
+  .banner__title {
+    font-size: 2.5rem;
+  }
+
+  .banner__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .banner__slope {
+    height: 250px;
+    left: -30px;
+    width: calc(100% + 60px);
+    bottom: -250px;
+    transform: skewY(-6deg);
+  }
+
+  .banner__content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 35vh;
+  }
+
+  .banner__title {
+    font-size: 2rem;
+  }
+
+  .banner__subtitle {
+    font-size: 1rem;
+  }
+
+  .banner__slope {
+    height: 250px;
+    left: -20px;
+    width: calc(100% + 40px);
+    bottom: -250px;
+    transform: skewY(-10deg);
+  }
+}
