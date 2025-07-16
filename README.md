@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# Suitmedia Ideas Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Suitmedia Logo](/public/logo.png)
 
-## Available Scripts
+## 📱 Live Demo
 
-In the project directory, you can run:
+[View Live Demo](https://suitmedia-technical-test-frontend.vercel.app/)
 
-### `npm start`
+## 🌟 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a responsive web application showcasing Suitmedia's "Ideas" portal - a platform where great things begin. The application features a modern UI with interactive components, responsive design, and seamless API integration.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+### 🔝 Header
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Fixed position header with scroll-aware behavior
+- Disappears on scroll down, reappears on scroll up with semi-transparent background
+- Active state highlighting for current page
+- Responsive mobile menu
 
-### `npm run build`
+### 🖼️ Banner
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Dynamic banner with parallax scrolling effect
+- Sloped bottom edge design without image modification
+- Responsive text overlay
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📋 Post List
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Dynamic post cards with consistent thumbnail ratios
+- Lazy loading for optimized performance
+- Sorting functionality (newest/oldest)
+- Configurable items per page (10, 20, 50)
+- Persistent state across page refreshes
+- Truncated titles with ellipsis for titles exceeding 3 lines
 
-### `npm run eject`
+### 🔄 API Integration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Proxy configuration for API requests
+- Pagination support
+- Sorting capabilities
+- Image size options
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React.js
+- CSS3 with custom animations
+- Axios for API requests
+- HTTP-Proxy-Middleware for API proxying
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+1. Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/habstrakT808/Suitmedia-Technical-Test-Frontend.git
+```
 
-### Analyzing the Bundle Size
+2. Navigate to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd Suitmedia-Technical-Test-Frontend
+```
 
-### Making a Progressive Web App
+3. Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+```
 
-### Advanced Configuration
+4. Start the development server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm start
+```
 
-### Deployment
+5. Open your browser and visit `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📱 Responsive Design
 
-### `npm run build` fails to minify
+The application is fully responsive and works seamlessly across:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Desktop screens
+- Tablets
+- Mobile devices
+
+## 📝 API Documentation
+
+The application uses the Suitmedia backend API:
+
+- Base URL: `https://suitmedia-backend.suitdev.com/api`
+- Endpoint: `/ideas`
+- Parameters:
+  - `page[number]`: Current page number
+  - `page[size]`: Items per page (10, 20, or 50)
+  - `append[]`: Image size options (small_image, medium_image)
+  - `sort`: Sorting order (-published_at for newest, published_at for oldest)
+
+Example API call:
+
+```
+https://suitmedia-backend.suitdev.com/api/ideas?page[number]=1&page[size]=10&append[]=small_image&append[]=medium_image&sort=-published_at
+```
+
+## 🧪 Project Structure
+
+```
+suitmedia-ideas/
+├── public/               # Static assets
+├── src/
+│   ├── components/       # React components
+│   │   ├── Banner/       # Banner component
+│   │   ├── Header/       # Header component
+│   │   ├── Pagination/   # Pagination component
+│   │   └── PostList/     # Post list and card components
+│   ├── hooks/            # Custom React hooks
+│   ├── services/         # API services
+│   ├── utils/            # Utility functions and constants
+│   ├── App.js            # Main App component
+│   └── index.js          # Application entry point
+└── README.md             # Project documentation
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👤 Author
+
+Developed as a technical test for Suitmedia.
+
+---
+
+⭐️ **Star this repository if you found it useful!** ⭐️
